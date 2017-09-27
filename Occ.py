@@ -6,12 +6,15 @@ HW03: StI/O: Divine your Destiny!
 '''
 import random
 
+
 def makedict(filename):
     d = dict()
     for line in open(filename):
         newline= line[line.rfind("n")]
         d[line[0:line.rfind(',')]] = line[line.rfind(',')+1:len(line)-1]#deals with the categories that include commas by searching from the end.
-        #rfind returns index of last comma. 
+        #rfind returns index of last comma.
+    if "Job Class" in d:
+        del d["Job Class"]
     return d
 
 #make string numbers into floats (first line of csv value is a string 

@@ -2,29 +2,47 @@
 <html>
   <head>
     <title>Jobs</title>
+    <style>
+      table{
+	  border: 1px solid blue;
+      }
+      thead{
+	  vertical-align: center;
+      }
+      h1{
+	  margin-left: auto;
+	  margin right: auto;
+      }
+    </style>
   </head>
 
   <body>
-    <table border=1>
+    <h1> b^2-4ac </h1>
+    <table border=0>
       <thead>
-	<th>job</th>
-	<th>percentages</th>
+	<th>Job Class</th>
+	<th>Percentages</th>
       </thead>
 
-      {% for k in dict %} 
+      {% for k in dict %}
+     
       <tr>
 	<td>{{k}}</td>
 	<td>{{dict[k]}}</td>
       </tr>
+    
       {% endfor %}
-
+      <tr>
+	<td> <b>Total</b></td>
+	<td> <b>99.8</b> </td>
+      </tr>
     </table>
     <p>
       ARE YOU READY TO HAVE YOUR FORTUNE READ??
-      <br><br>
-      DRUM ROLLLLLLL
-      <br><br>      
-      Your future job will be: {{rand}}
+      <br><br><br> <br> 
+      <a href="https://www.youtube.com/watch?v=itAOGRiYRLI"> <img src="drumroll.jpg"></a>
+      <br><br><br><br><br> <br><br><br>   <br><br> <br><br><br>    
+      <em>Your future job will be:</em> {{rand}}
     </p>
   </body>
 </html>
