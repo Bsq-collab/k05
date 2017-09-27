@@ -8,6 +8,11 @@ def hello_world():
     retStr = "No hablo queso!"
     return retStr
 
+@app.route("/occupations")
+def title():
+    retstr = "<h1>Ocupations in the United States</h1><br>This table shows percentages for different occupations among U.S. citizens."
+    return retstr
+
 '''
 @app.route("/my_foist_template")
 def test_tmplt():
