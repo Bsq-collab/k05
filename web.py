@@ -5,7 +5,7 @@ app= Flask(__name__)
 
 @app.route("/")
 def welcome():
-    return "<h1 color= blue> WELCOME </h1>"
+    return "<h1> WELCOME </h1>"
 
 @app.route("/occupations")
 
