@@ -34,6 +34,12 @@ def make_arr(d):
                 ctr-=1
     return jobs
 
+def make_table(csv):
+    table = "<table>"
+    for each in csv:
+        table+= "<th>" + each + "</th><th>" + csv[each]
+    return table
+
 #final selectio
 def get_random(arr):
     return random.choice(arr)#random.choice picks a random item from the array
