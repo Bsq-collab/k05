@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Jobs</title>
+  </head>
+
+  <body>
+    <table border=1>
+      <thead>
+	<th>job</th>
+	<th>percentages</th>
+      </thead>
+
+      {% for k in dict %} 
+      <tr>
+	<td>{{k}}</td>
+	<td>{{dict[k]}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+    <p>
+      ARE YOU READY TO HAVE YOUR FORTUNE READ??
+      <br><br>
+      DRUM ROLLLLLLL
+      <br><br>      
+      Your future job will be: {{rand}}
+    </p>
+  </body>
+</html>
+
+
+

@@ -34,20 +34,34 @@ def make_arr(d):
                 ctr-=1
     return jobs
 
-def make_table(csv):
-    table = "<table>"
-    for each in csv:
-        table+= "<th>" + each + "</th><th>" + csv[each]
-    return table
 
+'''def make_table(d):
+    table = "<table border = 1>\n\t<thead><th>Occupation</th><th>percentage</th></thead>"
+    
+    for each in d:
+        if each== "Job Class":
+            table=table
+        elif each== "Total":
+            table= table
+        else:
+             table+= "<tr><td>" + each + "</td><td>" + d[each] +"</td></tr>"
+             
+    return table+ "</table>"
+'''
 #final selectio
 def get_random(arr):
     return random.choice(arr)#random.choice picks a random item from the array
-    
-        
-#output
-print get_random(make_arr(make_float(makedict("occupations.csv")))) #prints random occ
-#print len(make_arr(make_float(makedict("occupations.csv"))))
 
+def getRandom(f):
+    return get_random(make_arr(make_float(makedict(f))))
+     
+#output
+#print get_random(make_arr(make_float(makedict("occupations.csv")))) #prints random occ
+#d= make_float(makedict("occupations.csv"))
+#print "DICTIONARY"
+
+#print d
+#tbl= make_table(d)
+#print tbl
  
 
