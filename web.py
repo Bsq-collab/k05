@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import Occ
+import util.Occ as occ
 
 app= Flask(__name__)
 
@@ -11,7 +11,7 @@ def welcome():
 #the occupations route
 @app.route("/occupations")
 def tablify(): #uses template to show page with table
-    return render_template('tabletmpl.html',dict= Occ.makedict("data/occupations.csv"),rand= Occ.getRandom("data/occupations.csv")
+    return render_template('tabletmpl.html',dict= occ.makedict("data/occupations.csv"),rand= occ.getRandom("data/occupations.csv")
     )
 
 
