@@ -13,12 +13,6 @@ def title():
     retstr = "<h1>Ocupations in the United States</h1><br>This table shows percentages for different occupations among U.S. citizens."
     return retstr
 
-'''
-@app.route("/my_foist_template")
-def test_tmplt():
-    return render_template( 'model_tmplt.html', foo ="foooooo", collection=coll)
-    return retStr
-'''
 if __name__ == "__main__":
     app.debug = True
     app.run()
