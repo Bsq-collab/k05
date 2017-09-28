@@ -11,7 +11,7 @@ def welcome():
 #the occupations route
 @app.route("/occupations")
 def tablify(): #uses template to show page with table
-    return render_template('tabletmpl.html',dict= Occ.makedict("occupations.csv"),rand= Occ.getRandom("occupations.csv")
+    return render_template('tabletmpl.html',dict= Occ.makedict("data/occupations.csv"),rand= Occ.getRandom("data/occupations.csv")
     )
 
 
