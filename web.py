@@ -3,13 +3,14 @@ import Occ
 
 app= Flask(__name__)
 
+#default homepage
 @app.route("/")
 def welcome():
-    return "<h1> WELCOME </h1>"
+    return "<h1> WELCOME </h1><br>Go to /occupations for a glimpse into your future..."
 
+#the occupations route
 @app.route("/occupations")
-
-def tablify():
+def tablify(): #uses template to show page with table
     return render_template('tabletmpl.html',dict= Occ.makedict("occupations.csv"),rand= Occ.getRandom("occupations.csv")
     )
 
