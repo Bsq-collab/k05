@@ -10,11 +10,12 @@ import random
 def makedict(filename):
     """
     makes a dictionary from csv file param 
-arg: 
+    arg: 
     string filename csv file 
-ret:
+    ret:
     dictionary d keys: jobs values: percents
     """
+
     d = dict()
     for line in open(filename):
         newline= line[line.rfind("n")]
@@ -31,9 +32,10 @@ def make_float(d):
     
 arg: 
     dictionary d whose values are to be typecasted into floats
-ret:
+    ret:
     dictionary with values changed into floats
-"""
+    """
+
     for k in d:
         try:
             d[k]=float(d[k])
@@ -47,11 +49,11 @@ def make_arr(d):
     makes an array of 998 based on dictionary values to then select a random choice
 for each key in the dictionary it adds it to an array as many times as ten times 
     the value. If the key is x and the value is 6.1 then x would be added to the array 61 times. 
-arg:
+    arg:
     dictionary d of keys type string and values type float
-ret:
+    ret:
     array of compiled jobs based on percentages
-"""
+    """
     jobs=[]
     for k in d:
         if type(d[k])!= str and k!="Total":
@@ -65,20 +67,20 @@ ret:
 def get_random(arr):
     """
     Uses an array to randomly choose a job using python builtin function random.choice(arr)
-arg:
+    arg:
     array arr compilation of jobs of type string from make_arr
-ret:
+    ret:
     string from array parameter which will be the name of the job
-"""
+    """
     return random.choice(arr)#random.choice picks a random item from the array
 
 
 def getRandom(f):
     """
     wrapper function to make executing it easier
-arg:
+    arg:
     string f will be the file name used in makedict
-ret:
+    ret:
     string randomly generated from choosing a job from the array randomly
     """
     return get_random(make_arr(make_float(makedict(f))))
